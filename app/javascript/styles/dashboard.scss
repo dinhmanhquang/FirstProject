@@ -1,0 +1,31 @@
+@import 'flatpickr/dist/flatpickr.css';
+
+.alert-alert {
+  color: #fff;
+  background-color: #e63757;
+  border-color: #e63757;
+}
+
+.alert-notice {
+  color: #fff;
+  background-color: #39afd1;
+  border-color: #39afd1;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  border-color: #d2ddec;
+}
+
+label {
+  display: block !important;
+  margin-top: 10px;
+}
+
+.card {
+  margin-bottom: 60px;
+}
+
+th .d-flex {
+  white-space: nowrap;
+}

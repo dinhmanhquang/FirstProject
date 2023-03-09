@@ -1,0 +1,2 @@
+class TodoPolicy < ApplicationPolicy
+end

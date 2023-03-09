@@ -1,0 +1,112 @@
+
+en:
+  activerecord:
+    models:
+      todo: Todo
+      user: User
+      admin: Admin
+    attributes:
+      todo:
+        
+        id: ID
+        
+        created_at: Created at
+        
+        updated_at: Updated at
+        
+        title: Title
+        
+        description: Description
+      user:
+        
+        id: ID
+        
+        created_at: Created at
+        
+        updated_at: Updated at
+        
+        encrypted_password: Encrypted password
+        
+        email: Email
+        
+        reset_password_token: Reset password token
+        
+        reset_password_sent_at: Reset password sent at
+        
+        remember_created_at: Remember created at
+        
+        current_sign_in_at: Current sign in at
+        
+        last_sign_in_at: Last sign in at
+        
+        current_sign_in_ip: Current sign in ip
+        
+        last_sign_in_ip: Last sign in ip
+        
+        sign_in_count: Sign in count
+        
+        password: Password
+        
+        password_confirmation: Password confirmation
+        
+        locked_at: Locked at
+        
+        failed_attempt: Failed attempts
+        
+        unlock_token: Unlock token
+        
+        confirmation_token: Confirmation token
+        
+        unconfirmed_email: Unconfirmed email
+        
+        confirmed_at: Confirmed at
+        
+        confirmation_sent_at: Confirmation sent at
+      admin:
+        
+        id: ID
+        
+        created_at: Created at
+        
+        updated_at: Updated at
+        
+        encrypted_password: Encrypted password
+        
+        email: Email
+        
+        reset_password_token: Reset password token
+        
+        reset_password_sent_at: Reset password sent at
+        
+        remember_created_at: Remember created at
+        
+        current_sign_in_at: Current sign in at
+        
+        last_sign_in_at: Last sign in at
+        
+        current_sign_in_ip: Current sign in ip
+        
+        last_sign_in_ip: Last sign in ip
+        
+        sign_in_count: Sign in count
+        
+        password: Password
+        
+        password_confirmation: Password confirmation
+        
+        locked_at: Locked at
+        
+        failed_attempt: Failed attempts
+        
+        unlock_token: Unlock token
+        
+        confirmation_token: Confirmation token
+        
+        unconfirmed_email: Unconfirmed email
+        
+        confirmed_at: Confirmed at
+        
+        confirmation_sent_at: Confirmation sent at
+  enums:
+  errors:
+    messages:

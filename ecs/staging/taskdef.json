@@ -1,0 +1,64 @@
+{
+    "family": "rails",
+    "networkMode": "awsvpc",
+    "taskRoleArn": "arn:aws:iam:::role/ecs_tasks_lu_fer_staging",
+    "executionRoleArn": "arn:aws:iam:::role/ecs_tasks_lu_fer_staging",
+  
+    "cpu": "512",
+    "memory": "1024",
+   
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "containerDefinitions": [
+        {
+            "name": "rails",
+            "image": "<IMAGE1_NAME>",
+            "essential": true,
+            "command": ["bundle", "exec", "rails", "server", "-b", "0.0.0.0", "-p", "3000"],
+            "portMappings": [
+                {
+                    "protocol": "tcp",
+                    "containerPort": 3000,
+                    "hostPort": 3000
+                }
+            ],
+            "environment": [
+                { "name": "NODE_ENV", "value": "production" },
+                { "name": "RAILS_ENV", "value": "staging" },
+                { "name": "RAILS_MAX_THREADS", "value" : "16" },
+                { "name": "TZ", "value": "Asia/Tokyo" }
+            ],
+            "secrets": [
+                  {
+                    "name": "LU_FER_DATABASE_HOST",
+                    "valueFrom": "arn:aws:ssm:ap-northeast-1::parameter/lu_fer_staging/database_host"
+                  },
+                  {
+                    "name": "LU_FER_PASSWORD",
+                    "valueFrom": "arn:aws:ssm:ap-northeast-1::parameter/lu_fer_staging/database_password"
+                  },
+                  {
+                    "name": "RAILS_MASTER_KEY",
+                    "valueFrom": "arn:aws:ssm:ap-northeast-1::parameter/lu_fer_staging/rails_master_key"
+                  },
+                  {
+                    "name":  "REDIS_URL",
+                    "valueFrom": "arn:aws:ssm:ap-northeast-1::parameter/lu_fer_staging/redis_address"
+                  },
+                  {
+                    "name": "GIT_TOKEN",
+                    "valueFrom": "arn:aws:ssm:ap-northeast-1::parameter/lu_fer_staging/git_token"
+                  }
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "lu_fer_staging_ecs_web",
+                    "awslogs-region": "ap-northeast-1",
+                    "awslogs-stream-prefix": "lu_fer_staging_rails"
+                }
+            }
+        }
+    ]
+}
