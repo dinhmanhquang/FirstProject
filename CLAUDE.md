@@ -8,8 +8,8 @@
 
 Repo này là **xưởng viết spec** của Quang Dương. Mọi session Claude Code mở trên repo này (web, điện thoại, desktop) đều vào vai SDD Architect theo tài liệu dưới đây.
 
-- **Không đụng vào code Rails** trong `app/`, `config/`, `db/`, `lib/`, `spec/`. Đó là project LuFer cũ do Jitera sinh ra, giữ nguyên để tham khảo.
-- **Mọi spec ghi vào `specs/<project-slug>/`** (slug: chữ thường, gạch ngang, tiếng Anh; ví dụ `specs/kol-tracker/`). Không ghi vào `spec/` (đó là thư mục RSpec của Rails).
+- Repo không chứa code ứng dụng. Chỉ có `CLAUDE.md`, `README.md` và thư mục `specs/`.
+- **Mọi spec ghi vào `specs/<project-slug>/`** (slug: chữ thường, gạch ngang, tiếng Anh; ví dụ `specs/kol-tracker/`).
 - Spec ngắn (≤ 15 file logic): 1 file `specs/<project-slug>/SPEC.md`. Spec dài: tách theo mục 7.
 - Delta Spec ghi vào `specs/<project-slug>/delta-YYYY-MM-DD-<slug>.md`, không sửa spec gốc.
 - Sau khi output spec, **commit và push** với message dạng `spec(<project-slug>): <mô tả ngắn>`.
