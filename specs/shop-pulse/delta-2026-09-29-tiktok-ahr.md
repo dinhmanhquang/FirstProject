@@ -27,7 +27,7 @@ Bài user gửi không truy cập được từ môi trường viết spec (host
 
 | Giả định | Lý do | Ảnh hưởng nếu sai |
 |---|---|---|
-| Bài user gửi nói về Account Health Rating | Đây là thay đổi lớn nhất về sức khoẻ shop của TikTok Shop VN trong 2026 và khớp mô tả "tính năng mới". | Nếu bài nói về tính năng khác: user paste nội dung, viết Delta Spec mới; Delta này vẫn đúng vì AHR đã có hiệu lực. |
+| ~~Bài user gửi nói về Account Health Rating~~ **Đã xác nhận sai (2026-09-29):** bài user gửi là "Issue Center", xem `delta-2026-09-29-tiktok-issue-center.md`. | Delta này giữ nguyên vì AHR đã thay thế Điểm vi phạm theo trang chính thức VN, độc lập với bài user gửi. | Không có. |
 | Điểm vi phạm TikTok không còn dùng cho shop VN từ 07/2026 | Trang VN ghi "thay thế hoàn toàn từ tháng 7". | Nếu shop nào còn thấy Điểm vi phạm: bật lại ngưỡng cũ bằng cách thêm chỉ số qua Delta Spec khác; dữ liệu cũ không mất vì chưa có shop nào build. |
 | Ngưỡng WARNING nội bộ cho AHR = 260, CRITICAL = 199 | CRITICAL trùng mức "cần cải thiện" chính thức; WARNING là đệm 60 điểm để xử lý trước khi rơi khỏi mức "khoẻ mạnh". | Trưởng nhóm chỉnh trong `/settings/thresholds`. |
 | Mốc hạn chế 150 / 100 / 50 không đưa vào code | Chỉ có ở nguồn phụ. | Nếu user xác nhận: thêm bảng `AhrMilestone` qua Delta Spec. |
